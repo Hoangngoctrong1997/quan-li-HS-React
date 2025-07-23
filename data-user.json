@@ -1,0 +1,50 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Phạm Minh Tuấn",
+      "username": "tuanpm",
+      "password": "tuan123",
+      "department": "Kỹ thuật",
+      "role": "Kỹ sư phần mềm",
+      "performanceScore": 8.9,
+      "reviews": [
+        {
+          "criteria": "Chất lượng công việc",
+          "score": 9,
+          "comment": "Hoàn thành đúng hạn, chất lượng cao",
+          "date": "2024-07-01T09:00:00.000Z",
+          "reviewer": "Trưởng phòng An"
+        },
+        {
+          "criteria": "Tinh thần làm việc nhóm",
+          "score": 8.5,
+          "comment": "Hợp tác tốt với đồng nghiệp",
+          "date": "2024-07-05T14:30:00.000Z",
+          "reviewer": "Trưởng nhóm Hùng"
+        }
+      ]
+    },
+    {
+      "name": "Lê Thị Mai 1",
+      "id": "2"
+    },
+    {
+      "username": "trong",
+      "password": "trong123",
+      "id": "ripJ8ut"
+    },
+    {
+      "name": "trọng",
+      "username": "tronghn",
+      "password": "trong123",
+      "id": "jU8RM_n"
+    },
+    {
+      "name": "loan",
+      "username": "loanmp",
+      "password": "loan123",
+      "id": "B8TBwg6"
+    }
+  ]
+}

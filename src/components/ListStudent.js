@@ -6,15 +6,15 @@ function ListStudent() {
     let navigate = useNavigate();
     let [studentlist, setStudentlist] = useState([]);
     useEffect(() => {
-    const loadStudent = () => {
-        axios.get('http://localhost:8888/students')
-            .then(response => {
-                setStudentlist(response.data);
-            })
-            .catch(error => {
-                console.error(error);
-            });
-    };
+        const loadStudent = () => {
+            axios.get('http://localhost:8888/students')
+                .then(response => {
+                    setStudentlist(response.data);
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+        };
         loadStudent()
     }, []);
     let handleDelete =(id)=>{
@@ -29,27 +29,28 @@ function ListStudent() {
                 });
         }
     }
-  return (
-  <>
-      <div className="container mt-4">
-          <h3>Danh sách sinh viên</h3>
-          {studentlist.length === 0 ? (
-              <p>Không có dữ liệu.</p>
-          ) : (
-              <ul className="list-group">
-                  {studentlist.map(student => (
-                      <li key={student.id} className="list-group-item">
-                          {student.name} - {student.class}
-                          <button onClick={()=>handleDelete(student.id)}>Xóa</button>
-                      </li>
-                  ))}
-              </ul>
-          )}
-          <button onClick={()=>{navigate('/addstudent')}}>Thêm mới</button>
+    return (
+        <>
+            <div className="container mt-4">
+                <h3>Danh sách sinh viên</h3>
+                {studentlist.length === 0 ? (
+                    <p>Không có dữ liệu.</p>
+                ) : (
+                    <ul className="list-group">
+                        {studentlist.map(student => (
+                            <li key={student.id} className="list-group-item">
+                                {student.name} - {student.class}
+                                <button>Chi tiết</button>
+                                <button onClick={()=>handleDelete(student.id)}>Xóa</button>
+                            </li>
+                        ))}
+                    </ul>
+                )}
+                <button onClick={()=>{navigate('/addstudent')}}>Thêm mới</button>
 
 
-      </div>
-  </>
-  );
+            </div>
+        </>
+    );
 }
 export default ListStudent;

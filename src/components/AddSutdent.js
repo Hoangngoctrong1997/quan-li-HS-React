@@ -9,7 +9,6 @@ function AddStudent() {
     const [name, setName] = useState('');
     const [studentClass, setStudentClass] = useState('');
     const [gpa, setGpa] = useState(0);
-
     const handleAdd = () => {
         if (!name || !studentClass || gpa === null || gpa === undefined) {
             alert('Vui lòng điền đầy đủ thông tin.');
@@ -67,6 +66,7 @@ function AddStudent() {
                     onChange={e => setGpa(e.target.value === '' ? 0 : Number(e.target.value))}
                     placeholder="Nhập GPA"
                 />
+                
             </div>
             <button className="btn btn-success" onClick={handleAdd}>Thêm mới</button>
             <button className="btn btn-secondary ms-2" onClick={() => navigate('/')}>Hủy</button>
